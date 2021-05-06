@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h2 class="text-center mt-4">Editer le bien</h2>
+
+    <div class="col-md-4 m-auto">
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button class="btn btn-primary mt-2">Sauvegarder</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

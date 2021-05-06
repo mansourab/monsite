@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <h2 class="text-center mt-4 mb-4">Login</h2>
+
+    <form action="{{ path('security.login') }}" class="col-md-4 m-auto mt-4" method="POST">
+        <input type="email" name="email" id="email" placeholder="Fill your email" class="form-control mb-4" value="{{ last_username }}" autofocus>
+        <input type="password" name="password" id="password" placeholder="Fill your password" class="form-control mb-4">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <button class="btn btn-primary btn-block mt-2">Se connecter</button>
+    </form>
+
+{% endblock %}

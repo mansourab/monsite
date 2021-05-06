@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Add Items'%}
+
+{% block body %}
+    <div class="col-md-6 m-auto">
+        <h2 class="text-center mt-4">Add new Item</h2>
+
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button class="btn btn-primary mt-2">Ajouter</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
